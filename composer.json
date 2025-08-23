@@ -1,0 +1,78 @@
+{
+    "name": "hosmelq/template",
+    "description": "",
+    "license": "MIT",
+    "keywords": [
+        "hosmelq"
+    ],
+    "authors": [
+        {
+            "name": "Hosmel Quintana",
+            "email": "hosmelq@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "illuminate/database": "^12.0 || ^13.0",
+        "illuminate/support": "^12.0 || ^13.0",
+        "spatie/laravel-package-tools": "^1.93",
+        "thecodingmachine/safe": "^3.4"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.54",
+        "hosmelq/php-coding-standard": "^1.1",
+        "larastan/larastan": "^3.13",
+        "laravel/pao": "^1.1",
+        "orchestra/testbench": "^10.0 || ^11.3",
+        "pestphp/pest": "^4.7 || ^5.3",
+        "shipmonk/composer-dependency-analyser": "^1.8"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "HosmelQ\\Template\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HosmelQ\\Template\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HosmelQ\\Template\\TemplateServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "ecs": "ecs check --fix=true",
+        "ecs:check": "ecs check",
+        "phpstan": "phpstan analyse --configuration=phpstan.neon.dist --memory-limit=4G",
+        "rector": "rector",
+        "test": "pest",
+        "test-coverage": "pest --coverage"
+    },
+    "scripts-descriptions": {
+        "ecs": "Format PHP code using the shared ECS set.",
+        "ecs:check": "Check PHP formatting using the shared ECS set.",
+        "phpstan": "Run PHPStan static analysis.",
+        "rector": "Run Rector automated refactoring.",
+        "test": "Run the test suite using Pest.",
+        "test-coverage": "Run the test suite with code coverage using Pest."
+    },
+    "$schema": "https://getcomposer.org/schema.json"
+}
