@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace HosmelQ\Template;
 
+use Override;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -13,6 +14,7 @@ class TemplateServiceProvider extends PackageServiceProvider
     /**
      * Configure package.
      */
+    #[Override]
     public function configurePackage(Package $package): void
     {
         $package
