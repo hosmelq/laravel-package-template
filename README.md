@@ -4,7 +4,7 @@ Describe what the package does in one or two sentences.
 
 ## Requirements
 
-- Laravel 12+
+- Laravel 13+
 - PHP 8.4+
 
 ## Installation
